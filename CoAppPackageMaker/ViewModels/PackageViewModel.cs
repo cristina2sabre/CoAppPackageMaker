@@ -22,7 +22,7 @@ namespace CoAppPackageMaker.ViewModels
         {           
             PackageSource packageSource = new PackageSource(new AutopackageMain());
             //how to set?
-            Architecture=  packageSource.AllRules.GetRulesByName("package").GetPropertyValue("Architecture");
+           // Architecture=  packageSource.AllRules.GetRulesByName("package").GetPropertyValue("Architecture");
              
         }
 

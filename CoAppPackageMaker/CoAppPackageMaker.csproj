@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autopackage">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Outercurve Foundation\Coapp.Devtools-1.2.0.173-Any-1E373a58e25250cb\Autopackage.exe</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Outercurve Foundation\Coapp.Devtools-1.2.0.216-Any-1E373a58e25250cb\Autopackage.exe</HintPath>
     </Reference>
     <Reference Include="CoApp.CCI, Version=1.2.0.173, Culture=neutral, PublicKeyToken=1e373a58e25250cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -76,15 +76,21 @@
     </ApplicationDefinition>
     <Compile Include="Models\RuleModel.cs" />
     <Compile Include="Temp\PackageSource.cs" />
-    <Compile Include="ViewModels\ExtraPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\ApplicationRoleViewModel.cs" />
+    <Compile Include="ViewModels\AssemblyRoleViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\DeveloperLibraryRoleViewModel.cs" />
+    <Compile Include="ViewModels\Base\ExtraPropertiesViewModel.cs" />
     <Compile Include="ViewModels\ImportViewModel.cs" />
+    <Compile Include="ViewModels\Base\IRules.cs" />
     <Compile Include="ViewModels\ManifestViewModel.cs" />
     <Compile Include="ViewModels\MetadataViewModel.cs" />
     <Compile Include="ViewModels\PackageComposition.cs" />
     <Compile Include="ViewModels\PackageViewModel.cs" />
     <Compile Include="ViewModels\RequiresViewModel.cs" />
+    <Compile Include="ViewModels\RolesViewModel.cs" />
     <Compile Include="ViewModels\RulesViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\Base\ViewModelBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

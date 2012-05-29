@@ -11,21 +11,15 @@ using CoApp.Developer.Toolkit.Scripting.Languages.PropertySheet;
 namespace CoAppPackageMaker.ViewModels
 {
 
-    public class RulesViewModel : ExtraPropertiesViewModelBase
+    public class RulesViewModel : ExtraPropertiesViewModelBase, IRules
         {
             private ObservableCollection<string> _ruleNames;
-            
-            public RulesViewModel()
+           
+
+            public RulesViewModel(string pathToPackage)
             {
                 _ruleNames = new ObservableCollection<string>();
-
-                PackageSource packageSource = new PackageSource(new AutopackageMain());
-                //expect to obtain form packageSource.AllRules - pakackage rule, metadata rule, provides rule ...
-                foreach (Rule rule in  packageSource.AllRules)
-                {
-                    _ruleNames.Add(rule.Name);
-                    
-                }
+                LoadRulesNames(pathToPackage);
             }
 
             public ObservableCollection<string> RulesNames
@@ -37,7 +31,22 @@ namespace CoAppPackageMaker.ViewModels
                     OnPropertyChanged("RulesNames");
                 }
             }
-            
+
+
+            public ObservableCollection<string> LoadRulesNames(string pathToPackage)
+            {
+
+                PackageSource packageSource = new PackageSource(new AutopackageMain());
+
+                //expect to obtain form packageSource.AllRules - pakackage rule, metadata rule, provides rule ...
+                foreach (Rule rule in packageSource.AllRules)
+                {
+                    _ruleNames.Add(rule.Name);
+
+                }
+
+                return _ruleNames;
+            }
         }
     }
 
