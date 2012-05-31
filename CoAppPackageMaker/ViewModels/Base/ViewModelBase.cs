@@ -9,6 +9,7 @@ namespace CoAppPackageMaker.ViewModels
     /// <summary>
     /// Provides common functionality for ViewModel classes
     /// </summary>
+    /// <from>http://code.msdn.microsoft.com/How-to-implement-MVVM-71a65441/</from>
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

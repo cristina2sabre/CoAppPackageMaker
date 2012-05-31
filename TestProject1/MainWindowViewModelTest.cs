@@ -15,20 +15,44 @@ namespace TestProject1
     [TestClass()]
     public class MainWindowViewModelTest
     {
-       
-        /// <summary>
-        ///A test for AddRule
-        ///</summary>
-        [TestMethod]
-        public void TestNewRuleIsAdded()
+        MainWindowViewModel _mainWindowViewModel=new MainWindowViewModel();
+        private string _ruleName;
+        private int _count;
+
+        //Use TestInitialize to run code before running each test
+        [TestInitialize()]
+        public void MyTestInitialize()
         {
-            MainWindowViewModel mainWindowViewModel= new MainWindowViewModel( );
-            mainWindowViewModel.RulesNames = new ObservableCollection<string>(){"package"};
-            mainWindowViewModel.AddRule("manifest");
-            Assert.AreEqual(2,mainWindowViewModel.RulesNames.Count);
+            _mainWindowViewModel = new MainWindowViewModel();
+            _ruleName = "test";
+            _mainWindowViewModel.RulesNames.Add(_ruleName);
+            _mainWindowViewModel.RulesNames.Add("test2");
+            _count = _mainWindowViewModel.RulesNames.Count;
         }
 
+        [TestMethod()]
+        public void RemoveNoItemSelectedTest()
+        {
+            //act
+            _mainWindowViewModel.DeleteCommand.Execute(_ruleName);
 
-        //after adding commands ->more tests for commands
+            //assert
+            Assert.AreEqual(_count, _count);
+        }
+
+        [TestMethod()]
+        public void RemoveAnItemSelectedTest()
+        {
+            //arrange
+            _mainWindowViewModel.RuleNameSelectedItem = _ruleName;
+
+            //act
+            _mainWindowViewModel.DeleteCommand.Execute(_ruleName);
+
+            //assert
+            Assert.AreEqual(_count-1, 1);
+        }
+
+       
     }
 }

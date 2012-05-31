@@ -7,6 +7,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestProject1
 {
+
+    /// <summary>
+    /// If PropertyChanged Event Raised, and check if  property name is correct
+    /// </summary>
+    /// <from>http://code.msdn.microsoft.com/How-to-implement-MVVM-71a65441</from>
     public class ViewModelTest
     {
         protected void CheckPropertyChangedRaised<T>(Action<T> action, string propertyName)

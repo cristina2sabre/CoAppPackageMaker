@@ -17,6 +17,7 @@ namespace CoAppPackageMaker.ViewModels
         {
             _roleNames = new ObservableCollection<string>();
             LoadRulesNames(pathToPackage);
+           
         }
 
         public ObservableCollection<string> RolesNames

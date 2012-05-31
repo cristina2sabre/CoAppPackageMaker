@@ -16,15 +16,7 @@ namespace TestProject1
     public class PackageViewModelTest : ViewModelTest
     {
 
-
-        [TestMethod]
-        public void TestUpdateProperty()
-        {
-            PackageViewModel target = new PackageViewModel() {Architecture = "86"};
-            target.Architecture = "64";
-            Assert.AreEqual(target.Architecture,"64");
-        }
-
+       
         [TestMethod]
         public void ChangePropertyOfTheViewModelAndCheckNotifyPropertyChangedWorks()
         {

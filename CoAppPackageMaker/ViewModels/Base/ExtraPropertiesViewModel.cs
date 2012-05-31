@@ -8,7 +8,7 @@ namespace CoAppPackageMaker.ViewModels
  public abstract class ExtraPropertiesViewModelBase:ViewModelBase
     {
         private string _helpTip;
-        private bool _isRequires;
+        private bool _isRequired;
 
         public string HelpTip
         {
@@ -22,10 +22,10 @@ namespace CoAppPackageMaker.ViewModels
 
         public bool IsRequired
         {
-            get { return _isRequires; }
+            get { return _isRequired; }
             set
             {
-                _isRequires = value;
+                _isRequired = value;
                 OnPropertyChanged("IsRequired");
             }
         }
