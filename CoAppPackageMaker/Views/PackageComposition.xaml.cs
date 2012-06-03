@@ -11,23 +11,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CoAppPackageMaker.ViewModels.Base;
 
-
-namespace CoAppPackageMaker
+namespace CoAppPackageMaker.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PackageComposition.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PackageComposition : UserControl
     {
-        public MainWindow()
+        public PackageComposition()
         {
             InitializeComponent();
-           
-
         }
-
-      
     }
 }

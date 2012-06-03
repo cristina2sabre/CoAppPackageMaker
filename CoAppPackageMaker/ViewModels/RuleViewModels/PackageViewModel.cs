@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CoApp.Autopackage;
-using CoApp.Packaging.Client;
+
 using System.Security.Policy;
 
 namespace CoAppPackageMaker.ViewModels
@@ -14,17 +13,11 @@ namespace CoAppPackageMaker.ViewModels
         private string _version;
         private string _architecture;
         private string _displayName;
-        private Url _location;
-        private Url _feed;
+        private string _location;
+        private string _feed;
         private string _publisher;
 
-        public PackageViewModel()
-        {           
-            PackageSource packageSource = new PackageSource(new AutopackageMain());
-            //how to set?
-           // Architecture=  packageSource.AllRules.GetRulesByName("package").GetPropertyValue("Architecture");
-             
-        }
+       
 
         
         public string Name
@@ -67,7 +60,7 @@ namespace CoAppPackageMaker.ViewModels
             }
         }
 
-        public Url Location
+        public string Location
         {
             get { return _location; }
             set
@@ -77,7 +70,7 @@ namespace CoAppPackageMaker.ViewModels
             }
         }
         
-        public Url Feed
+        public string Feed
         {
             get { return _feed; }
             set

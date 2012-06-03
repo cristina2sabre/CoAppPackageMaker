@@ -15,7 +15,7 @@ namespace TestProject1
     [TestClass()]
     public class MainWindowViewModelTest
     {
-        MainWindowViewModel _mainWindowViewModel=new MainWindowViewModel();
+        private MainWindowViewModel _mainWindowViewModel = new MainWindowViewModel();
         private string _ruleName;
         private int _count;
 
